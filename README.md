@@ -22,12 +22,20 @@ optimizer = torch.optim.Adam(
     model.parameters(), 1e-3, weight_decay=1e-5, amsgrad=True, 
 )
 
-Sample training Predictions:
+Sample training Predictions at various epochs (Output=Predictions):
+Epoch 42
 
 ![image](https://user-images.githubusercontent.com/43177212/115964885-6bbbbe00-a51e-11eb-8a0d-88f7785cbbb9.png)
 ![image](https://user-images.githubusercontent.com/43177212/115964889-6e1e1800-a51e-11eb-87f1-77ed2574ebd5.png)
 ![image](https://user-images.githubusercontent.com/43177212/115964890-6fe7db80-a51e-11eb-8c7c-e35fef4c83c4.png)
 ![image](https://user-images.githubusercontent.com/43177212/115964895-724a3580-a51e-11eb-8027-49d592be2832.png)
+
+Epoch 334
+
+![image](https://user-images.githubusercontent.com/43177212/115964967-d836bd00-a51e-11eb-9334-78cc3336076d.png)
+![image](https://user-images.githubusercontent.com/43177212/115964972-db31ad80-a51e-11eb-8e22-77ae167bdbc2.png)
+![image](https://user-images.githubusercontent.com/43177212/115964974-dcfb7100-a51e-11eb-9e71-ebf066538eb5.png)
+![image](https://user-images.githubusercontent.com/43177212/115964975-df5dcb00-a51e-11eb-909d-0de1cdd4e659.png)
 
 
 Training and validation loss: 
