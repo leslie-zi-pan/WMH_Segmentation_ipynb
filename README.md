@@ -22,106 +22,16 @@ optimizer = torch.optim.Adam(
     model.parameters(), 1e-3, weight_decay=1e-5, amsgrad=True, 
 )
 
-----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #
-================================================================
-            Conv2d-1         [-1, 16, 128, 128]             304
-            Conv2d-2         [-1, 16, 128, 128]             304
-    InstanceNorm2d-3         [-1, 16, 128, 128]               0
-           Dropout-4         [-1, 16, 128, 128]               0
-             PReLU-5         [-1, 16, 128, 128]               1
-            Conv2d-6         [-1, 16, 128, 128]           2,320
-    InstanceNorm2d-7         [-1, 16, 128, 128]               0
-           Dropout-8         [-1, 16, 128, 128]               0
-             PReLU-9         [-1, 16, 128, 128]               1
-     ResidualUnit-10         [-1, 16, 128, 128]               0
-           Conv2d-11           [-1, 32, 64, 64]           4,640
-           Conv2d-12           [-1, 32, 64, 64]           4,640
-   InstanceNorm2d-13           [-1, 32, 64, 64]               0
-          Dropout-14           [-1, 32, 64, 64]               0
-            PReLU-15           [-1, 32, 64, 64]               1
-           Conv2d-16           [-1, 32, 64, 64]           9,248
-   InstanceNorm2d-17           [-1, 32, 64, 64]               0
-          Dropout-18           [-1, 32, 64, 64]               0
-            PReLU-19           [-1, 32, 64, 64]               1
-     ResidualUnit-20           [-1, 32, 64, 64]               0
-           Conv2d-21           [-1, 64, 32, 32]          18,496
-           Conv2d-22           [-1, 64, 32, 32]          18,496
-   InstanceNorm2d-23           [-1, 64, 32, 32]               0
-          Dropout-24           [-1, 64, 32, 32]               0
-            PReLU-25           [-1, 64, 32, 32]               1
-           Conv2d-26           [-1, 64, 32, 32]          36,928
-   InstanceNorm2d-27           [-1, 64, 32, 32]               0
-          Dropout-28           [-1, 64, 32, 32]               0
-            PReLU-29           [-1, 64, 32, 32]               1
-     ResidualUnit-30           [-1, 64, 32, 32]               0
-           Conv2d-31          [-1, 128, 16, 16]          73,856
-           Conv2d-32          [-1, 128, 16, 16]          73,856
-   InstanceNorm2d-33          [-1, 128, 16, 16]               0
-          Dropout-34          [-1, 128, 16, 16]               0
-            PReLU-35          [-1, 128, 16, 16]               1
-           Conv2d-36          [-1, 128, 16, 16]         147,584
-   InstanceNorm2d-37          [-1, 128, 16, 16]               0
-          Dropout-38          [-1, 128, 16, 16]               0
-            PReLU-39          [-1, 128, 16, 16]               1
-     ResidualUnit-40          [-1, 128, 16, 16]               0
-           Conv2d-41          [-1, 256, 16, 16]          33,024
-           Conv2d-42          [-1, 256, 16, 16]         295,168
-   InstanceNorm2d-43          [-1, 256, 16, 16]               0
-          Dropout-44          [-1, 256, 16, 16]               0
-            PReLU-45          [-1, 256, 16, 16]               1
-           Conv2d-46          [-1, 256, 16, 16]         590,080
-   InstanceNorm2d-47          [-1, 256, 16, 16]               0
-          Dropout-48          [-1, 256, 16, 16]               0
-            PReLU-49          [-1, 256, 16, 16]               1
-     ResidualUnit-50          [-1, 256, 16, 16]               0
-   SkipConnection-51          [-1, 384, 16, 16]               0
-  ConvTranspose2d-52           [-1, 64, 32, 32]         221,248
-   InstanceNorm2d-53           [-1, 64, 32, 32]               0
-          Dropout-54           [-1, 64, 32, 32]               0
-            PReLU-55           [-1, 64, 32, 32]               1
-         Identity-56           [-1, 64, 32, 32]               0
-           Conv2d-57           [-1, 64, 32, 32]          36,928
-   InstanceNorm2d-58           [-1, 64, 32, 32]               0
-          Dropout-59           [-1, 64, 32, 32]               0
-            PReLU-60           [-1, 64, 32, 32]               1
-     ResidualUnit-61           [-1, 64, 32, 32]               0
-   SkipConnection-62          [-1, 128, 32, 32]               0
-  ConvTranspose2d-63           [-1, 32, 64, 64]          36,896
-   InstanceNorm2d-64           [-1, 32, 64, 64]               0
-          Dropout-65           [-1, 32, 64, 64]               0
-            PReLU-66           [-1, 32, 64, 64]               1
-         Identity-67           [-1, 32, 64, 64]               0
-           Conv2d-68           [-1, 32, 64, 64]           9,248
-   InstanceNorm2d-69           [-1, 32, 64, 64]               0
-          Dropout-70           [-1, 32, 64, 64]               0
-            PReLU-71           [-1, 32, 64, 64]               1
-     ResidualUnit-72           [-1, 32, 64, 64]               0
-   SkipConnection-73           [-1, 64, 64, 64]               0
-  ConvTranspose2d-74         [-1, 16, 128, 128]           9,232
-   InstanceNorm2d-75         [-1, 16, 128, 128]               0
-          Dropout-76         [-1, 16, 128, 128]               0
-            PReLU-77         [-1, 16, 128, 128]               1
-         Identity-78         [-1, 16, 128, 128]               0
-           Conv2d-79         [-1, 16, 128, 128]           2,320
-   InstanceNorm2d-80         [-1, 16, 128, 128]               0
-          Dropout-81         [-1, 16, 128, 128]               0
-            PReLU-82         [-1, 16, 128, 128]               1
-     ResidualUnit-83         [-1, 16, 128, 128]               0
-   SkipConnection-84         [-1, 32, 128, 128]               0
-  ConvTranspose2d-85          [-1, 2, 256, 256]             578
-   InstanceNorm2d-86          [-1, 2, 256, 256]               0
-          Dropout-87          [-1, 2, 256, 256]               0
-            PReLU-88          [-1, 2, 256, 256]               1
-         Identity-89          [-1, 2, 256, 256]               0
-           Conv2d-90          [-1, 2, 256, 256]              38
-     ResidualUnit-91          [-1, 2, 256, 256]               0
-================================================================
-Total params: 1,625,449
-Trainable params: 1,625,449
-Non-trainable params: 0
+Sample training Predictions:
+
+![image](https://user-images.githubusercontent.com/43177212/115964885-6bbbbe00-a51e-11eb-8a0d-88f7785cbbb9.png)
+![image](https://user-images.githubusercontent.com/43177212/115964889-6e1e1800-a51e-11eb-87f1-77ed2574ebd5.png)
+![image](https://user-images.githubusercontent.com/43177212/115964890-6fe7db80-a51e-11eb-8c7c-e35fef4c83c4.png)
+![image](https://user-images.githubusercontent.com/43177212/115964895-724a3580-a51e-11eb-8027-49d592be2832.png)
+
 
 Training and validation loss: 
+
 ![image](https://user-images.githubusercontent.com/43177212/115964730-b6890600-a51d-11eb-9f65-1ffa0ee043c4.png)
 
 Prediction:
