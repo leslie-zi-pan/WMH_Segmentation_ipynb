@@ -11,17 +11,18 @@ Labels 0, 1, 2 corresponding to background, WMH and other pathologies, respectiv
 
 ## **Model:**
 UNet(
-    dimensions=2,
-    in_channels=2,
-    out_channels=2,
-    channels=(16, 32, 64, 128, 256),
-    strides=(2, 2, 2, 2),
-    num_res_units=2,
-    dropout=0.2,
-    kernel_size=3,
-).to(device)
 
-## **Optimizer: **
+    dimensions=2,
+    in_channels=2,    
+    out_channels=2,    
+    channels=(16, 32, 64, 128, 256),    
+    strides=(2, 2, 2, 2),    
+    num_res_units=2,        
+    dropout=0.2,    
+    kernel_size=3,
+)
+
+## **Optimizer:**
 optimizer = torch.optim.Adam(
     model.parameters(), 1e-3, weight_decay=1e-5, amsgrad=True, 
 )
