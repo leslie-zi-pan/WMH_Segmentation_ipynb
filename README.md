@@ -122,7 +122,7 @@ Trainable params: 1,625,449
 Non-trainable params: 0
 
 Training and validation loss: 
-![image](https://user-images.githubusercontent.com/43177212/115964499-b1778700-a51c-11eb-9630-504bd3f02bf7.png)
+![image](https://user-images.githubusercontent.com/43177212/115964730-b6890600-a51d-11eb-9f65-1ffa0ee043c4.png)
 
 Prediction:
 8 subject WMH segmentation DICE score
