@@ -9,7 +9,7 @@ Using T1 and FLAIR images for predictions.
 
 Labels 0, 1, 2 corresponding to background, WMH and other pathologies, respectively. Label to multi-channel transform used to create 2 channel representing WMH and background(merging class 0 and 2). 
 
-**Model:**
+## **Model:**
 UNet(
     dimensions=2,
     in_channels=2,
@@ -21,14 +21,16 @@ UNet(
     kernel_size=3,
 ).to(device)
 
-**Otimizer: **
+## **Optimizer: **
 optimizer = torch.optim.Adam(
     model.parameters(), 1e-3, weight_decay=1e-5, amsgrad=True, 
 )
 
-**Sample training Predictions at various epochs (Output=Predictions):**
-**Image Channel 0 - T1
-Image Channel 1 - FLAIR**
+## **Sample training Predictions at various epochs (Output=Predictions):**
+
+**Image Channel 0 - T1**
+
+**Image Channel 1 - FLAIR**
 Epoch 42
 
 ![image](https://user-images.githubusercontent.com/43177212/115964885-6bbbbe00-a51e-11eb-8a0d-88f7785cbbb9.png)
@@ -44,11 +46,11 @@ Epoch 334
 ![image](https://user-images.githubusercontent.com/43177212/115964975-df5dcb00-a51e-11eb-909d-0de1cdd4e659.png)
 
 
-**Training and validation loss: **
+## **Training and validation loss: **
 
 ![image](https://user-images.githubusercontent.com/43177212/115964730-b6890600-a51d-11eb-9f65-1ffa0ee043c4.png)
 
-**Prediction:**
+## **Prediction:**
 8 subject WMH segmentation DICE score
 [0.9567131996154785, 0.9833950400352478, 0.9731700420379639, 0.9664475917816162, 0.9873022437095642, 0.9588155746459961, 0.978124737739563, 0.954979658126831]
 
@@ -62,7 +64,7 @@ To implement
 ![image](https://user-images.githubusercontent.com/43177212/115964521-cc49fb80-a51c-11eb-86a9-c664705cb316.png)
 
 
-**Tasks to do:**
+## **Tasks to do:**
 - Implement scheduler to improve loss by reducing learning rate over epoch
 - Move code into Project folder and separate into relevante modules and classes
 - Train on more data (if applicable and relavant for segmentation task in question)
