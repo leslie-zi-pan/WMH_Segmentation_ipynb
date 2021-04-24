@@ -47,6 +47,13 @@ Epoch 334
 ![image](https://user-images.githubusercontent.com/43177212/115964974-dcfb7100-a51e-11eb-9e71-ebf066538eb5.png)
 ![image](https://user-images.githubusercontent.com/43177212/115964975-df5dcb00-a51e-11eb-909d-0de1cdd4e659.png)
 
+Epoch 354
+
+![image](https://user-images.githubusercontent.com/43177212/115965409-12a15980-a521-11eb-970b-fc85c4ee785d.png)
+![image](https://user-images.githubusercontent.com/43177212/115965411-146b1d00-a521-11eb-8e2b-e1bdba442952.png)
+![image](https://user-images.githubusercontent.com/43177212/115965412-1634e080-a521-11eb-845d-a19de2b9cb94.png)
+![image](https://user-images.githubusercontent.com/43177212/115965415-18973a80-a521-11eb-9a0a-cdd17a2f0b91.png)
+
 
 ## **Training and validation loss: **
 
