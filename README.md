@@ -32,6 +32,7 @@ optimizer = torch.optim.Adam(
 **Image Channel 0 - T1**
 
 **Image Channel 1 - FLAIR**
+
 Epoch 42
 
 ![image](https://user-images.githubusercontent.com/43177212/115964885-6bbbbe00-a51e-11eb-8a0d-88f7785cbbb9.png)
